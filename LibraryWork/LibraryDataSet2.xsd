@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LibraryDataSet2" targetNamespace="http://tempuri.org/LibraryDataSet2.xsd" xmlns:mstns="http://tempuri.org/LibraryDataSet2.xsd" xmlns="http://tempuri.org/LibraryDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=DESKTOP-NALH133;Initial Catalog=Library;Integrated Security=True;TrustServerCertificate=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="LibraryConnectionString" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HallStaffTableAdapter" GeneratorDataComponentClassName="HallStaffTableAdapter" Name="HallStaff" UserDataComponentName="HallStaffTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString" DbObjectName="Library.dbo.HallStaff" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT HallName, GenreType, PersonName, PersonRole, Rating FROM dbo.HallStaff</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HallName" DataSetColumn="HallName" />
+              <Mapping SourceColumn="GenreType" DataSetColumn="GenreType" />
+              <Mapping SourceColumn="PersonName" DataSetColumn="PersonName" />
+              <Mapping SourceColumn="PersonRole" DataSetColumn="PersonRole" />
+              <Mapping SourceColumn="Rating" DataSetColumn="Rating" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LibraryDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="LibraryDataSet2" msprop:Generator_DataSetName="LibraryDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HallStaff" msprop:Generator_RowEvHandlerName="HallStaffRowChangeEventHandler" msprop:Generator_RowDeletedName="HallStaffRowDeleted" msprop:Generator_RowDeletingName="HallStaffRowDeleting" msprop:Generator_RowEvArgName="HallStaffRowChangeEvent" msprop:Generator_TablePropName="HallStaff" msprop:Generator_RowChangedName="HallStaffRowChanged" msprop:Generator_RowChangingName="HallStaffRowChanging" msprop:Generator_TableClassName="HallStaffDataTable" msprop:Generator_RowClassName="HallStaffRow" msprop:Generator_TableVarName="tableHallStaff" msprop:Generator_UserTableName="HallStaff">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HallName" msprop:Generator_ColumnPropNameInRow="HallName" msprop:Generator_ColumnPropNameInTable="HallNameColumn" msprop:Generator_ColumnVarNameInTable="columnHallName" msprop:Generator_UserColumnName="HallName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GenreType" msprop:Generator_ColumnPropNameInRow="GenreType" msprop:Generator_ColumnPropNameInTable="GenreTypeColumn" msprop:Generator_ColumnVarNameInTable="columnGenreType" msprop:Generator_UserColumnName="GenreType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PersonName" msprop:Generator_ColumnPropNameInRow="PersonName" msprop:Generator_ColumnPropNameInTable="PersonNameColumn" msprop:Generator_ColumnVarNameInTable="columnPersonName" msprop:Generator_UserColumnName="PersonName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PersonRole" msprop:Generator_ColumnPropNameInRow="PersonRole" msprop:Generator_ColumnPropNameInTable="PersonRoleColumn" msprop:Generator_ColumnVarNameInTable="columnPersonRole" msprop:Generator_UserColumnName="PersonRole">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_UserColumnName="Rating" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LibraryDataSet1" targetNamespace="http://tempuri.org/LibraryDataSet1.xsd" xmlns:mstns="http://tempuri.org/LibraryDataSet1.xsd" xmlns="http://tempuri.org/LibraryDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=DESKTOP-NALH133;Initial Catalog=Library;Integrated Security=True;TrustServerCertificate=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="LibraryConnectionString" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BookGenreAuthorTableAdapter" GeneratorDataComponentClassName="BookGenreAuthorTableAdapter" Name="BookGenreAuthor" UserDataComponentName="BookGenreAuthorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString" DbObjectName="Library.dbo.BookGenreAuthor" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT BookName, GenreType, AuthorFname, AuthorSname FROM dbo.BookGenreAuthor</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BookName" DataSetColumn="BookName" />
+              <Mapping SourceColumn="GenreType" DataSetColumn="GenreType" />
+              <Mapping SourceColumn="AuthorFname" DataSetColumn="AuthorFname" />
+              <Mapping SourceColumn="AuthorSname" DataSetColumn="AuthorSname" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LibraryDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="LibraryDataSet1" msprop:Generator_DataSetName="LibraryDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BookGenreAuthor" msprop:Generator_RowEvHandlerName="BookGenreAuthorRowChangeEventHandler" msprop:Generator_RowDeletedName="BookGenreAuthorRowDeleted" msprop:Generator_RowDeletingName="BookGenreAuthorRowDeleting" msprop:Generator_RowEvArgName="BookGenreAuthorRowChangeEvent" msprop:Generator_TablePropName="BookGenreAuthor" msprop:Generator_RowChangedName="BookGenreAuthorRowChanged" msprop:Generator_RowChangingName="BookGenreAuthorRowChanging" msprop:Generator_TableClassName="BookGenreAuthorDataTable" msprop:Generator_RowClassName="BookGenreAuthorRow" msprop:Generator_TableVarName="tableBookGenreAuthor" msprop:Generator_UserTableName="BookGenreAuthor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookName" msprop:Generator_ColumnPropNameInRow="BookName" msprop:Generator_ColumnPropNameInTable="BookNameColumn" msprop:Generator_ColumnVarNameInTable="columnBookName" msprop:Generator_UserColumnName="BookName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GenreType" msprop:Generator_ColumnPropNameInRow="GenreType" msprop:Generator_ColumnPropNameInTable="GenreTypeColumn" msprop:Generator_ColumnVarNameInTable="columnGenreType" msprop:Generator_UserColumnName="GenreType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AuthorFname" msprop:Generator_ColumnPropNameInRow="AuthorFname" msprop:Generator_ColumnPropNameInTable="AuthorFnameColumn" msprop:Generator_ColumnVarNameInTable="columnAuthorFname" msprop:Generator_UserColumnName="AuthorFname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AuthorSname" msprop:Generator_ColumnPropNameInRow="AuthorSname" msprop:Generator_ColumnPropNameInTable="AuthorSnameColumn" msprop:Generator_ColumnVarNameInTable="columnAuthorSname" msprop:Generator_UserColumnName="AuthorSname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
